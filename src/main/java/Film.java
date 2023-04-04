@@ -1,3 +1,5 @@
+import enums.Genre;
+
 public class Film extends MediaItem {
 
     private String director;

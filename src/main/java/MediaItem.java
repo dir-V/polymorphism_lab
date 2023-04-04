@@ -1,3 +1,5 @@
+import enums.Genre;
+
 public abstract class MediaItem {
 
     protected Genre genre;

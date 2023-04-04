@@ -1,3 +1,5 @@
+import enums.Genre;
+
 public class Book extends MediaItem{
 
     private String author;
