@@ -1,6 +1,7 @@
 import enums.Genre;
+import interfaces.IPlay;
 
-public class Film extends MediaItem {
+public class Film extends MediaItem implements IPlay {
 
     private String director;
 
@@ -14,5 +15,8 @@ public class Film extends MediaItem {
         return director;
     }
 
+    public String play(){
+        return "Now playing " + this.title;
+    }
 
 }

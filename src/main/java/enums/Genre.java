@@ -10,6 +10,14 @@ public enum Genre {
     HISTORICAL,
     HORROR,
     SCI_FI,
+    ROCK,
+    INDIE,
+    POP,
+    HIPHOP,
+    RnB,
+
+
+
 
 
 }
