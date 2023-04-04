@@ -15,7 +15,7 @@ public abstract class MediaItem {
         this.price = price;
     }
 
-    public int getReviewScore(){
+    public int getReviewScore(MediaItem mediaItem){
         return this.reviewScore;
     }
 

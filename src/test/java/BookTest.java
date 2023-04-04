@@ -14,7 +14,7 @@ public class BookTest {
 
     @Test
     public void canRead(){
-        System.out.println(book.read());
+        System.out.println(book.read(book));
     }
 
 

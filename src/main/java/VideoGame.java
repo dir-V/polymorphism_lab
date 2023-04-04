@@ -1,10 +1,12 @@
 import enums.Genre;
+import enums.Platform;
 import interfaces.IPlay;
 
 public class VideoGame extends MediaItem implements IPlay {
 
     private String publisher;
-    public VideoGame(String title, Genre genre, String publisher, int reviewScore, double price) {
+    private Platform platform;
+    public VideoGame(String title, Genre genre, String publisher, Platform platform, int reviewScore, double price) {
         super(title, genre, reviewScore, price);
         this.publisher = publisher;
     }

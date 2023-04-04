@@ -9,7 +9,7 @@ public class Book extends MediaItem{
         this.author = author;
     }
 
-    public String read(){
+    public String read(Book book){
         return this.title + " is a " + genre + " book by " + this.author;
     }
 }
