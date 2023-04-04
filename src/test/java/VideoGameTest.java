@@ -20,6 +20,16 @@ public class VideoGameTest {
         assertThat(videoGame.play()).isEqualTo("Now playing Jak and Daxter");
     }
 
+    @Test
+    public void canSaveGame(){
+        assertThat(videoGame.saveProgress(20)).isEqualTo("Progress Saved. 20%");
+        assertThat(videoGame.getProgress(videoGame)).isEqualTo("Resuming from 20% SAVE GAME.");
+    }
+
+    @Test
+    public void saveGameEquals0(){
+        assertThat(videoGame.getProgress(videoGame)).isEqualTo("Resuming from 0% SAVE GAME.");
+    }
 
 
 }

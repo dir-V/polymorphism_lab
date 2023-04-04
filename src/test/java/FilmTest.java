@@ -2,6 +2,8 @@ import enums.Genre;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 public class FilmTest {
 
     Film bladeRunner;
@@ -14,8 +16,21 @@ public class FilmTest {
     }
 
     @Test
-    public void canGetReviewScore(){
-        System.out.println(bladeRunner.getReviewScore(bladeRunner));
+    public void canPlay(){
+        assertThat(bladeRunner.play()).isEqualTo("Now playing Blade Runner 2049");
     }
+
+    @Test
+    public void canSaveProgress(){
+        assertThat(bladeRunner.saveProgress(60)).isEqualTo("Blade Runner 2049 will continue from 60 minutes in next time it is played");
+        assertThat(bladeRunner.getProgress(bladeRunner)).isEqualTo("Resuming Blade Runner 2049 from 60 minutes in.");
+    }
+
+    @Test
+    public void filmStartsFromBeginning(){
+        assertThat(bladeRunner.getProgress(bladeRunner)).isEqualTo("Resuming Blade Runner 2049 from 0 minutes in.");
+    }
+
+
 
 }

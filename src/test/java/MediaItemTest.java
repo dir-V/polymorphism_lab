@@ -21,10 +21,10 @@ public class MediaItemTest {
 
     @Test
     public void canGetReviewScore(){
-        assertThat(book1.getReviewScore(book1) == (book1.reviewScore));
-        assertThat(book2.getReviewScore(book2) == (book2.reviewScore));
-        assertThat(film.getReviewScore(film) == (film.reviewScore));
-        assertThat(videoGame.getReviewScore(videoGame) == (videoGame.reviewScore));
+        assertThat(book1.getReviewScore(book1)).isEqualTo(book1.reviewScore);
+        assertThat(book2.getReviewScore(book2)).isEqualTo(book2.reviewScore);
+        assertThat(film.getReviewScore(film)).isEqualTo(film.reviewScore);
+        assertThat(videoGame.getReviewScore(videoGame)).isEqualTo(videoGame.reviewScore);
     }
 
 
